@@ -1,0 +1,643 @@
+----- Testing the *= (double) operator. You should get 45.34
+And the result is: 45.34
+
+Time Elapsed so far: 00:00:00.123 FIRST
+
+----- Testing ContainerItem Copy Constructor ...
+SUCCESS: ContainerItem's copy constructor passed test
+
+----- Testing ContainerItem swap() Method ...
+SUCCESS: ContainerItem's swap method worked properly.
+
+Number of columns: 10
+Number of rows: 1
+Number of columns in Bond: 0
+Number of rows in Bond: 0
+Number of columns in third_container_item: 6
+Number of rows in third_container_item: 1
+
+
+----- Testing the [] operator ...
+Row 0, Col FirstDblCol: 4444.44
+Row 0, Col 0: 4444.44
+Row 0, Col FirstIntCol: 1024
+Row 0, Col 1: 1024
+Row 0, Col FirstStrCol: 123456.789000
+Row 0, Col SecondDblCol: 1234.46
+Row 0, Col SecondIntCol: 777
+Row 0, Col long_long_item: 12345678901234
+Row 0, Col SecondIntCol via get (): 777
+
+
+third_container_item(4, daysToSettle): NullItem::to_int() NullItem lacks any value
+
+{
+
+ROW   0
+
+FirstDblCol<double> = 4444.444400
+FirstIntCol<int> = 1024
+FirstStrCol<string> = 123456.789000
+bfwd_clnt_config  {
+
+  ROW   0
+
+  userid<string> = moeinh
+  cusip<string> = 08000H9S6
+  rank<int> = 8
+  }
+SecondDblCol<double> = 1234.456379
+Stock  {
+
+  ROW   0
+
+  id<int> = 1
+  modified_time<int> = 932722339
+  productType<string> = stock
+  cusip<string> = 0401149E2
+  description<string> = ATT CORP of USA
+  ccy<string> = USD
+  issuerId<int> = 41
+  risk_1<int> = 27
+  test_int_column<int> = 1
+  notional<double> = 45.340000
+  ticker<string> = T.N
+  }
+SecondIntCol<int> = 777
+third_container_item  {
+
+  ROW   0
+
+  id<int> = 6
+  modified_time<int> = 0
+  name<string> = ZAR
+  description<string> = Sth Africa
+  ccy<string> = JPY
+  second_name<string> = none
+  }
+long_long_item<longlong> = 12345678901234
+EMPTY_STRING<string> = 
+}
+{
+
+ROW   0
+
+FirstDblCol<double> = 4444.444400
+FirstIntCol<int> = 1024
+FirstStrCol<string> = 123456.789000
+bfwd_clnt_config  {
+
+  ROW   0
+
+  userid<string> = moeinh
+  cusip<string> = 08000H9S6
+  rank<int> = 8
+  }
+SecondDblCol<double> = 1234.456379
+Stock  {
+
+  ROW   0
+
+  id<int> = 1
+  modified_time<int> = 932722339
+  productType<string> = stock
+  cusip<string> = 0401149E2
+  description<string> = ATT CORP of USA
+  ccy<string> = USD
+  issuerId<int> = 41
+  risk_1<int> = 27
+  test_int_column<int> = 1
+  notional<double> = 45.340000
+  ticker<string> = T.N
+  }
+SecondIntCol<int> = 777
+third_container_item  {
+
+  ROW   0
+
+  id<int> = 6
+  modified_time<int> = 0
+  name<string> = ZAR
+  description<string> = Sth Africa
+  ccy<string> = JPY
+  second_name<string> = none
+  }
+long_long_item<longlong> = 12345678901234
+EMPTY_STRING<string> = 
+}
+Time Elapsed so far: 00:00:00.009 SECOND
+
+conitem ['Bond'] == conitem ['Bond']
+conitem ['third_container_item'] == conitem ['third_container_item']
+
+Binary size of container is: 587
+----- Comparing the binary constructed with original
+SUCCESS: conitem == bin_cpy_con
+
+
+
+{
+
+ROW   0
+
+FirstDblCol<double> = 4444.444400
+FirstIntCol<int> = 1024
+FirstStrCol<string> = 123456.789000
+bfwd_clnt_config  {
+
+  ROW   0
+
+  userid<string> = moeinh
+  cusip<string> = 08000H9S6
+  rank<int> = 8
+  }
+SecondDblCol<double> = 1234.456379
+Stock  {
+
+  ROW   0
+
+  id<int> = 1
+  modified_time<int> = 932722339
+  productType<string> = stock
+  cusip<string> = 0401149E2
+  description<string> = ATT CORP of USA
+  ccy<string> = USD
+  issuerId<int> = 41
+  risk_1<int> = 27
+  test_int_column<int> = 1
+  notional<double> = 45.340000
+  ticker<string> = T.N
+  }
+SecondIntCol<int> = 777
+third_container_item  {
+
+  ROW   0
+
+  id<int> = 6
+  modified_time<int> = 0
+  name<string> = ZAR
+  description<string> = Sth Africa
+  ccy<string> = JPY
+  second_name<string> = none
+  }
+long_long_item<longlong> = 12345678901234
+EMPTY_STRING<string> = 
+}
+
+
+----- Checking the column remove method
+{
+
+ROW   0
+
+FirstDblCol<double> = 4444.444400
+FirstIntCol<int> = 1024
+FirstStrCol<string> = 123456.789000
+SecondDblCol<double> = 1234.456379
+Stock  {
+
+  ROW   0
+
+  id<int> = 1
+  modified_time<int> = 932722339
+  productType<string> = stock
+  cusip<string> = 0401149E2
+  description<string> = ATT CORP of USA
+  ccy<string> = USD
+  issuerId<int> = 41
+  risk_1<int> = 27
+  test_int_column<int> = 1
+  notional<double> = 45.340000
+  ticker<string> = T.N
+  }
+SecondIntCol<int> = 777
+third_container_item  {
+
+  ROW   0
+
+  id<int> = 6
+  modified_time<int> = 0
+  name<string> = ZAR
+  description<string> = Sth Africa
+  ccy<string> = JPY
+  second_name<string> = none
+  }
+long_long_item<longlong> = 12345678901234
+EMPTY_STRING<string> = 
+}
+
+
+----- Testing the project() method
+Befor project:
+Time Elapsed so far: 00:00:00.013 
+
+{
+
+ROW   0
+
+id<int> = 1
+modified_time<int> = 932722339
+productType<string> = stock
+cusip<string> = 0401149E2
+description<string> = ATT CORP of USA
+ccy<string> = USD
+issuerId<int> = 41
+risk_1<int> = 27
+test_int_column<int> = 1
+notional<double> = 45.340000
+ticker<string> = T.N
+}
+
+{
+
+ROW   0
+
+id<int> = 6
+modified_time<int> = 0
+name<string> = ZAR
+description<string> = Sth Africa
+ccy<string> = JPY
+second_name<string> = none
+}
+
+After project:
+{
+
+ROW   0
+
+id<int> = 6
+modified_time<int> = 0
+productType<string> = stock
+cusip<string> = 0401149E2
+description<string> = Sth Africa
+ccy<string> = JPY
+issuerId<int> = 41
+risk_1<int> = 27
+test_int_column<int> = 1
+notional<double> = 45.340000
+ticker<string> = T.N
+}
+
+{
+
+ROW   0
+
+id<int> = 6
+modified_time<int> = 0
+name<string> = ZAR
+description<string> = Sth Africa
+ccy<string> = JPY
+second_name<string> = none
+}
+
+----- Testing DateItem
+Local Time is: 03/18/2018 12:38:06.686   Nanoseconds: 686000000
+GMT Time is: 03/18/2018 16:38:06.686   Microseconds: 686000
+Fame date is: 18Mar2018
+Date/Time should be 19721202: 12/02/1972 00:00:00.000
+Date/Time should be '19910223 16:23:45.230': 02/23/1991 16:23:45.230
+Date/Time should be '19910223 16:23:45.230': 02/23/1991 16:23:45.230
+Date/Time should be '20100207 12:00:00.000': 02/07/2010 12:00:00.000
+Date/Time should be '20100207 12:32:00.000': 02/07/2010 12:32:00.000
+Date/Time should be '20100207 12:32:12.000': 02/07/2010 12:32:12.000
+DateTime::diff_seconds(): Time difference between different time zones is not implemented currently.
+----- Testing ReferenceItem
+
+{
+
+ROW   0
+
+id<int> = 6
+modified_time<int> = 0
+productType<string> = stock
+cusip<string> = 0401149E2
+description<string> = Sth Africa
+ccy<string> = JPY
+issuerId<int> = 41
+risk_1<int> = 27
+test_int_column<int> = 1
+notional<double> = 45.340000
+ticker<string> = T.N
+}
+
+Number of columns: 11
+description: Sth Africa
+modified_time (20010618): 20010618
+
+----- Now assiging ci3 to the ReferenceItem
+
+{
+
+ROW   0
+
+id<int> = 6
+modified_time<int> = 0
+name<string> = ZAR
+description<string> = Sth Africa
+ccy<string> = JPY
+second_name<string> = none
+}
+
+Time Elapsed so far: 00:00:00.008 NEXT ONE
+
+
+----- Testing ReferenceItem's get_refed_di()
+
+{
+
+ROW   0
+
+id<int> = 6
+modified_time<int> = 0
+name<string> = ZAR
+description<string> = Sth Africa
+ccy<string> = JPY
+second_name<string> = none
+}
+
+
+----- Testing DateItem's add_days()
+
+Now is: 03/18/2018 12:38:06.699
+After adding 1 day: 03/19/2018 12:38:06.699
+After adding -1 day: 03/18/2018 12:38:06.699
+After adding 1 business day: 03/19/2018 12:38:06.699
+After adding -1 business day: 03/16/2018 12:38:06.699
+After adding 2 business days to '12/24/2009 09:30:00.000' you get '12/28/2009 09:30:00.000'
+After adding 2 business days to '12/24/2008 09:30:00.000' you get '12/26/2008 09:30:00.000'
+After adding 2 business days to '12/24/2006 09:30:00.000' you get '12/26/2006 09:30:00.000'
+After adding 2 business days to '12/23/2005 09:30:00.000' you get '12/27/2005 09:30:00.000'
+After adding 2 business days to '12/23/2004 09:30:00.000' you get '12/27/2004 09:30:00.000'
+After adding 2 business days to '12/22/2000 09:30:00.000' you get '12/26/2000 09:30:00.000'
+After adding 2 business days to '12/24/1998 09:30:00.000' you get '12/28/1998 09:30:00.000'
+
+----- Testing DateItem's GMT vs Local time
+
+GMT now time: 03/18/2018 16:38:06.706   1521391086
+GMT ALT Constructor time: 03/18/2018 16:38:06.706   1521391086
+
+Local now time: 03/18/2018 12:38:06.706   1521391086
+Local ALT Constructor time: 03/18/2018 12:38:06.706   1521391086
+
+Local 1970 ALT Constructor time: 01/01/1970 00:00:00.000   18000
+GMT 1970 ALT Constructor time: 01/01/1970 00:00:00.000   0
+
+Local 1989 ALT Constructor time: 12/14/1989 20:15:23.000   629687723
+GMT 1989 ALT Constructor time: 12/14/1989 20:15:23.000   629669723
+
+
+----- Testing DateItem's business day methods
+
+20020101 is a US holiday: YES
+20011122 (Thanksgiving) is a US holiday: YES
+12/25/1997 00:00:00.000 may not be a holiday
+01/01/1999 00:00:00.000 may not be a holiday
+12/25/1998 00:00:00.000 may not be a holiday
+12/31/1999 00:00:00.000 may not be a holiday
+12/24/1999 00:00:00.000 may not be a holiday
+01/01/2001 00:00:00.000 may not be a holiday
+12/25/2000 00:00:00.000 may not be a holiday
+01/01/2002 00:00:00.000 may not be a holiday
+12/25/2001 00:00:00.000 may not be a holiday
+01/01/2003 00:00:00.000 may not be a holiday
+12/25/2002 00:00:00.000 may not be a holiday
+01/01/2004 00:00:00.000 may not be a holiday
+12/25/2003 00:00:00.000 may not be a holiday
+12/31/2004 00:00:00.000 may not be a holiday
+12/24/2004 00:00:00.000 may not be a holiday
+01/02/2006 00:00:00.000 may not be a holiday
+12/26/2005 00:00:00.000 may not be a holiday
+01/01/2007 00:00:00.000 may not be a holiday
+01/02/2007 00:00:00.000 may not be a holiday
+12/25/2006 00:00:00.000 may not be a holiday
+01/01/2008 00:00:00.000 may not be a holiday
+
+----- Testing DateItem's diff methods
+
+di1 is: 01/01/2002 12:54:31.000
+di2 is: 02/01/2002 03:50:30.000
+second difference between di1 and di2: -2.64576e+06
+minute difference between di1 and di2: -44096
+hour difference between di1 and di2: -734.933
+day difference between di1 and di2: -30.6222
+business day difference between di1 and di2: -22.6222
+week difference between di1 and di2: -4.3746
+After adding 10000 business days to 19700101, the date is 04/30/2008 00:00:00.000
+Time Elapsed so far: 00:00:00.059 DIFF methods
+
+
+----- Testing Empty StringItem's
+
+Empty string is: ""
+Test string is: "This is test string"
+Test string after empty string assignment ""
+
+
+----- Testing empty ContainerItem assignment
+
+SUCCESS: Empty contianer was copied properly
+
+
+----- Testing add_row()
+
+5
+{
+
+ROW   0
+
+One<int> = 0
+Two<int> = 1
+
+ROW   1
+
+One<int> = 2
+Two<int> = 3
+
+ROW   2
+
+One<int> = 4
+Two<int> = 5
+
+ROW   3
+
+One<int> = 6
+Two<int> = 7
+
+ROW   4
+
+One<int> = 8
+Two<int> = 9
+}
+
+
+----- Testing DateItem's DST vs EST (Going Forward)
+
+	Going from EST to DST
+
+03/31/2006 00:00:00.000 --- 1143781200
+04/01/2006 00:00:00.000 --- 1143867600
+04/02/2006 00:00:00.000 --- 1143954000
+04/03/2006 00:00:00.000 --- 1144036800
+04/04/2006 00:00:00.000 --- 1144123200
+04/05/2006 00:00:00.000 --- 1144209600
+04/06/2006 00:00:00.000 --- 1144296000
+04/07/2006 00:00:00.000 --- 1144382400
+04/08/2006 00:00:00.000 --- 1144468800
+04/09/2006 00:00:00.000 --- 1144555200
+04/10/2006 00:00:00.000 --- 1144641600
+
+
+	Going from DST to EST
+
+10/28/2005 00:00:00.000 --- 1130472000
+10/29/2005 00:00:00.000 --- 1130558400
+10/30/2005 00:00:00.000 --- 1130644800
+10/31/2005 00:00:00.000 --- 1130734800
+11/01/2005 00:00:00.000 --- 1130821200
+11/02/2005 00:00:00.000 --- 1130907600
+11/03/2005 00:00:00.000 --- 1130994000
+11/04/2005 00:00:00.000 --- 1131080400
+11/05/2005 00:00:00.000 --- 1131166800
+11/06/2005 00:00:00.000 --- 1131253200
+11/07/2005 00:00:00.000 --- 1131339600
+
+
+	Going from EST to DST in one shot
+
+03/31/2006 00:00:00.000 --- 1143781200
+04/10/2006 00:00:00.000 --- 1144641600
+
+
+	Going from DST to EST in one shot
+
+10/28/2005 00:00:00.000 --- 1130472000
+11/07/2005 00:00:00.000 --- 1131339600
+
+----- Testing DateItem's DST vs EST (Going Backward)
+
+	Going from EST to DST
+
+04/08/2006 00:00:00.000 --- 1144468800
+04/07/2006 00:00:00.000 --- 1144382400
+04/06/2006 00:00:00.000 --- 1144296000
+04/05/2006 00:00:00.000 --- 1144209600
+04/04/2006 00:00:00.000 --- 1144123200
+04/03/2006 00:00:00.000 --- 1144036800
+04/02/2006 00:00:00.000 --- 1143954000
+04/01/2006 00:00:00.000 --- 1143867600
+03/31/2006 00:00:00.000 --- 1143781200
+03/30/2006 00:00:00.000 --- 1143694800
+03/29/2006 00:00:00.000 --- 1143608400
+
+
+	Going from DST to EST
+
+11/05/2005 00:00:00.000 --- 1131166800
+11/04/2005 00:00:00.000 --- 1131080400
+11/03/2005 00:00:00.000 --- 1130994000
+11/02/2005 00:00:00.000 --- 1130907600
+11/01/2005 00:00:00.000 --- 1130821200
+10/31/2005 00:00:00.000 --- 1130734800
+10/30/2005 00:00:00.000 --- 1130644800
+10/29/2005 00:00:00.000 --- 1130558400
+10/28/2005 00:00:00.000 --- 1130472000
+10/27/2005 00:00:00.000 --- 1130385600
+10/26/2005 00:00:00.000 --- 1130299200
+
+
+	Going from EST to DST in one shot
+
+04/08/2006 00:00:00.000 --- 1144468800
+03/29/2006 00:00:00.000 --- 1143608400
+
+
+	Going from DST to EST in one shot
+
+11/05/2005 00:00:00.000 --- 1131166800
+10/26/2005 00:00:00.000 --- 1130299200
+
+
+	Going from EST to DST in one shot (2)
+
+03/09/2009 16:30:00.000 --- 1236630600
+02/17/2009 16:30:00.000 --- 1234906200
+
+
+	Going from DST to EST in one shot (3)
+
+11/03/2008 16:30:00.000 --- 1225747800
+10/31/2008 16:30:00.000 --- 1225485000
+
+----- Testing DateItem's going over year boundary
+
+
+
+	Going Forward
+
+12/25/2008 16:30:00.000 --- 1230240600
+12/26/2008 16:30:00.000 --- 1230327000
+12/27/2008 16:30:00.000 --- 1230413400
+12/28/2008 16:30:00.000 --- 1230499800
+12/29/2008 16:30:00.000 --- 1230586200
+12/30/2008 16:30:00.000 --- 1230672600
+12/31/2008 16:30:00.000 --- 1230759000
+01/01/2009 16:30:00.000 --- 1230845400
+01/02/2009 16:30:00.000 --- 1230931800
+01/03/2009 16:30:00.000 --- 1231018200
+01/04/2009 16:30:00.000 --- 1231104600
+
+
+	Going Backward
+
+01/05/2008 16:30:00.000 --- 1199568600
+01/04/2008 16:30:00.000 --- 1199482200
+01/03/2008 16:30:00.000 --- 1199395800
+01/02/2008 16:30:00.000 --- 1199309400
+01/01/2008 16:30:00.000 --- 1199223000
+12/31/2007 16:30:00.000 --- 1199136600
+12/30/2007 16:30:00.000 --- 1199050200
+12/29/2007 16:30:00.000 --- 1198963800
+12/28/2007 16:30:00.000 --- 1198877400
+12/27/2007 16:30:00.000 --- 1198791000
+12/26/2007 16:30:00.000 --- 1198704600
+
+----- Testing DateItem's time zone changes
+
+Now Local:        03/18/2018 12:38:06.858
+GMT Local:        03/18/2018 16:38:06.858
+Now Buenos Aires: 03/18/2018 13:38:06.858
+Now Tehran:       03/18/2018 20:08:06.858
+Now Tokyo:        03/19/2018 01:38:06.858
+Now Sydeny:       03/19/2018 03:38:06.858
+Now New Zealand:  03/19/2018 05:38:06.858
+Now Moscow:       03/18/2018 19:38:06.858
+Now Shanghai:     03/19/2018 00:38:06.858
+Now Berlin:       03/18/2018 17:38:06.858
+Now Paris:        03/18/2018 17:38:06.858
+Now Stockholm:    03/18/2018 16:38:06.858
+Now New York:     03/18/2018 12:38:06.858
+Now Los Amgeles:  03/18/2018 09:38:06.858
+Now Local (2):    03/18/2018 12:38:06.858
+
+Going from Local to Sydney: 03/19/2018 03:38:06.858
+
+Local Date/Time: 11/23/2009 09:38:43.345
+
+Local changed to Sydney: 11/24/2009 01:38:43.345
+
+----- Testing DateItem's const char * constructor
+
+
+
+Total Time Elapsed: 00:00:00.214 TOTAL
+
+
+
+All Elapsed Times:
+00:00:00.123 FIRST
+00:00:00.009 SECOND
+00:00:00.013 
+00:00:00.008 NEXT ONE
+00:00:00.059 DIFF methods
+
+
