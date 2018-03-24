@@ -6,7 +6,7 @@ LOCAL_BIN_DIR = ../bin/$(BUILD_PLATFORM)
 LOCAL_OBJ_DIR = ../obj/$(BUILD_PLATFORM)
 LOCAL_INCLUDE_DIR = ../include
 PROJECT_LIB_DIR = ../../../lib/$(BUILD_PLATFORM)
-PROJECT_INCLUDE_DIR = ../../../include
+PROJECT_INCLUDE_DIR = ../../include
 
 # -----------------------------------------------------------------------------
 
